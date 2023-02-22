@@ -10,23 +10,37 @@ import StudentsList from '../components/studentsList/StudentsList'
 import Navbar from '../components/navbar/Navbar'
 import StudentsList2 from '../components/studentsList2/StudentsList2'
 import Todo from './todo'
-import Update from '../components/update/Update'
+import Update from './Update'
+import Form from '../components/button/form/Form'
+import SignUp from './signup'
+import ApiPractice from '../components/apiPractice/ApiPractice'
+import ReduxTodo from '../components/reduxTodo/ReduxTodo'
+import ReduxFirebaseTodo from '../components/reduxFirebaseTodo/ReduxFirebaseTodo'
+import AuthPractice from '../components/authPractice/AuthPractice'
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
+      {/* <ApiPractice/> */}
       {/* <Navbar/> */}
-     <Update/>
+      {/* <Form/> */}
+     {/* <Update/> */}
+     {/* <ReduxTodo/> */}
+     {/* <AuthPractice/> */}
+     {/* <ReduxFirebaseTodo/> */}
+     {/* <SignUp/> */}
       {/* <Counter /> */}
       {/* <StudentsList /> */}
       {/* <StudentsList2/> */}
       <Todo/>
-      {/* <Button color="red" buttonTitle="1st button" data="something"/>
+      
+    
+      <Button color="red" buttonTitle="1st button" data="something"/>
 <br />
 <Button  color="blue" buttonTitle="2nd button" extraStyle={{padding:20,color:"red"}}/>
 <br />
-<Button color="green" buttonTitle="3rd button"/>
+<Button color="green" buttonTitle="3rd button" extraStyle={{margin:20,fontSize:30}}/>
 <br />
-<Button color="yellow" buttonTitle="4th button"/> */}
+<Button color="yellow" buttonTitle="4th button"/> 
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

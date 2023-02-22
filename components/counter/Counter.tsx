@@ -7,7 +7,6 @@ const Counter = () => {
         // counterValue = counterValue + 1
         setCountValue(countValue + 1)
         console.log("countervalue",countValue);
-
     }
     const onClickDecrementHandler = () => {
         // counterValue = counterValue - 1

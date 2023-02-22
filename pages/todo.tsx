@@ -12,15 +12,16 @@ const Todo = () => {
   const [todoItem, setTodoItem] = useState<string>('')
   const [completeTodo, setCompleteTodo] = useState<any[]>([])
   const [update,setUpdate]=useState<boolean>(false)
-  const [oldItem,setOldItem]=useState({})
+  const [completeItem,setCompleteItem]=useState('')
+  const [oldItem,setOldItem]=useState('')
   const addTodoItem = () => {
     if (!(todoItem)) {
       alert('enter a todo')
       return
     }
-    if(update==true){
-      setTodoItem('rana')
-    }
+    // if(update==true){
+    //   setTodoItem('rana')
+    // }
     const addNewTodoItem = todoItem
     setTodoItem(addNewTodoItem)
     setTodo([...todo, addNewTodoItem])
@@ -32,7 +33,7 @@ const Todo = () => {
       if (todos != item) {
         console.log('delete items', item);
 
-        return todo
+        return todos
       }
     })
     setTodo(del)
@@ -42,18 +43,22 @@ const Todo = () => {
     let value=item
 setTodoItem(value)
 setUpdate(true)
-onEditHandler()
-const updateValue=todo.map((item)=>{
-  if(value==item){
-    return todo
-  }
-})
+setOldItem(item)
+// onEditHandler()
+// const updateValue=todo.map((item)=>{
+//   if(value==item){
+//     return todo
+//   }
+// })
 // setTodo([...todo,setTodoItem])
   }
 const onEditHandler=()=>{
-  // let updateItem={
-  //   item:todoItem
-  // }
+  let updateItem=todoItem
+  let index:number=todo.indexOf(oldItem)
+  todo[index]=updateItem
+  setTodo([...todo])
+  setUpdate(false)
+  setTodoItem('')
   // let updatedTodos=todo.map((todos)=>{
   //   if(oldItem.item==todos.item){
   //     return updateItem
@@ -72,8 +77,17 @@ const onEditHandler=()=>{
 }
   const completedItem = (item: any) => {
     console.log('complete handler called', item);
-    setCompleteTodo([...completeTodo, item])
-  }
+    setCompleteItem(item)
+    const arry=completeTodo.map((items)=>{
+      if(items!=item){
+        // return item
+         setCompleteTodo([...completeTodo,item])
+      }
+    })
+    if(arry==completeTodo){
+    }else{return alert('this item has already exist')}
+    }
+  
   ////////////////
   //   const onDeleteHandler = (item:any)=>{
   //     console.log("user want to delete this item", item);
@@ -136,8 +150,8 @@ const onEditHandler=()=>{
                       <Text display='flex' alignItems='center' pl='20px' >
                         {item}
                       </Text>
-                      <br />
-                      <br />
+                      {/* <br />
+                      <br /> */}
                       <Box>
                         <Button bg='white' onClick={() => completedItem(item)}>
                           <CheckIcon />

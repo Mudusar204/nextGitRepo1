@@ -13,12 +13,18 @@
     "@chakra-ui/react": "^2.3.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.3",
     "chakra": "^0.0.3",
     "firebase": "^9.15.0",
     "framer-motion": "^7.6.5",
     "next": "13.0.2",
+    "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.1",
+    "redux": "^4.2.0",
     "ui": "^0.2.4"
   },
   "devDependencies": {
