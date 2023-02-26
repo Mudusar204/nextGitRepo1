@@ -26,21 +26,21 @@ const Home: NextPage = () => {
      {/* <Update/> */}
      {/* <ReduxTodo/> */}
      {/* <AuthPractice/> */}
-     {/* <ReduxFirebaseTodo/> */}
+     <ReduxFirebaseTodo/>
      {/* <SignUp/> */}
       {/* <Counter /> */}
       {/* <StudentsList /> */}
       {/* <StudentsList2/> */}
-      <Todo/>
+      {/* <Todo/> */}
       
-    
+{/*     
       <Button color="red" buttonTitle="1st button" data="something"/>
 <br />
 <Button  color="blue" buttonTitle="2nd button" extraStyle={{padding:20,color:"red"}}/>
 <br />
 <Button color="green" buttonTitle="3rd button" extraStyle={{margin:20,fontSize:30}}/>
 <br />
-<Button color="yellow" buttonTitle="4th button"/> 
+<Button color="yellow" buttonTitle="4th button"/>  */}
       {/* <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

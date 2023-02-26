@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { auth, signInWithEmailAndPassword } from "../config/fires"
+import { auth, signInWithEmailAndPassword,createUserWithEmailAndPassword } from "../config/fires"
 // import { toast } from "react-toastify";
 import { useRouter  } from "next/router";
 
@@ -14,9 +14,11 @@ export default function useLogin() {
 
     try {
       setLoader(true)
-      await signInWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password)
+
+      // await signInWithEmailAndPassword(auth, email, password)
       // toast.success('Successfully login!');
-      router.push('/Update')
+      // router.push('/Update')
     } catch (e) {
       // toast.error(e.message);
       console.log('====================================');

@@ -24,10 +24,11 @@ const fireBaseTodo = createSlice({
             .addCase(addTodo.fulfilled, (state, action:any) => {
                 console.log(action.payload);
                 state.todos.push(action.payload)
-                // let newState:any={
-                //     ...state,todos:action.payload
-                // }
+                let newState:any={
+                    ...state,todos:action.payload
+                }
                 // return newState
+                state=newState
             });
         builder
             .addCase(fetchTodos.fulfilled, (state, action) => {

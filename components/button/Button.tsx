@@ -10,7 +10,7 @@ type buttonType = {
     // {
     // padding:number,
     // color:string,
-    // border:string
+    // border:string 
     //     },
 
 }
